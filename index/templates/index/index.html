@@ -1,0 +1,520 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="{% static 'index/images/favicon.png' %}" type="image/png" />
+    <title>247-Connect</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'index/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'index/css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'index/css/themify-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'index/vendors/owl-carousel/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'index/vendors/nice-select/css/nice-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'index/fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'index/fonts/icomoon/style.css' %}">
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'index/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'index/css/edu-style.css' %}" />
+    
+    
+  </head>
+
+  <body>
+    <!--================ Start Header Menu Area =================-->
+    <div class="site-wrap">
+        <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div> <!-- .site-mobile-menu -->
+        <header class="site-navbar py-1 bg-light" role="banner">
+
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-6 col-xl-2">
+                        <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">247<strong>Connect</strong></a>
+                        </h1>
+                    </div>
+
+                    <div class="col-10 col-xl-10 d-none d-xl-block">
+                        <nav class="site-navigation text-right" role="navigation">
+
+                            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="{% url 'aggregate-template' %}">Aggregate Calculator</a></li>
+                                <li><a href="index.html">Course Selector</a></li>
+                                <!-- <li class="has-children">
+                                    <a href="category.html">Category</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Full Time</a></li>
+                                        <li><a href="#">Part Time</a></li>
+                                        <li><a href="#">Freelance</a></li>
+                                        <li><a href="#">Internship</a></li>
+                                        <li><a href="#">Termporary</a></li>
+                                    </ul>
+                                </li> -->
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="new-post.html"><span class="rounded bg-primary py-2 px-3 text-white"><span
+                                                class="h5 mr-2">+</span> Add course</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-6 col-xl-2 text-right d-block">
+
+                        <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
+                            style="position: relative; top: 3px;"><a href="#"
+                                class="site-menu-toggle js-menu-toggle text-black"><span
+                                    class="icon-menu h3"></span></a></div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+    <!--================ End Header Menu Area =================-->
+
+    <!--================ Start Home Banner Area =================-->
+    <section class="home_banner_area" style="background-image: url({% static 'index/images/lp.png' %})">
+      <div class="banner_inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="banner_content text-center">
+                <h3 class="text-uppercase">
+                  Best online education service In the world
+                </h3>
+                <h2 class="text-uppercase mt-4 mb-5 d-none d-md-block">
+                  One Step Ahead This Season
+                </h2>
+                <div>
+                  <a href="{% url 'aggregate-template' %}" class="primary-btn2 mb-3 mb-sm-0">Aggregate Calculator</a>
+                  <a href="{% url 'course-selector' %}" class="primary-btn mb-3 ml-sm-3 ml-0">Course Selector</a>
+                  <a href="#" class="primary-btn2 mb-3 ml-sm-3 ml-0">Online Registration</a>
+                  <a href="#" class="primary-btn ml-sm-3 ml-0">Blog</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ End Home Banner Area =================-->
+
+    <!--================ Start Feature Area =================-->
+    <section class="feature_area section_gap_top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="main_title">
+              <h2 class="mb-3">Awesome Feature</h2>
+              <p>
+                We are intersted in the satisfaction of our lovers!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><span class="flaticon-student"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Scholarship Updates</h4>
+                <p>
+                  Get lastest updates on schorlarships that are available for you
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><span class="flaticon-book"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Buy LASU Past questions</h4>
+                <p>
+                  We also get you covered on on LASU undergraduate past questions and answers for any level and department
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="single_feature">
+              <div class="icon"><span class="flaticon-earth"></span></div>
+              <div class="desc">
+                <h4 class="mt-3 mb-2">Global Certification</h4>
+                <p>
+                  Bla Bla Bla
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ End Feature Area =================-->
+
+    <!--================ Start Popular Courses Area =================-->
+    <div class="popular_courses">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="main_title">
+              <h2 class="mb-3">Our Popular Courses</h2>
+              <p>
+                Replenish man have thing gathering lights yielding shall you
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- single course -->
+          <div class="col-lg-12">
+            <div class="owl-carousel active_course">
+              <div class="single_course">
+                <div class="course_head">
+                  <img class="img-fluid" src="{% static 'index/images/c1.jpg' %}" alt="" />
+                </div>
+                <div class="course_content">
+                  <span class="price">$25</span>
+                  <span class="tag mb-4 d-inline-block">design</span>
+                  <h4 class="mb-3">
+                    <a href="course-details.html">Custom Product Design</a>
+                  </h4>
+                  <p>
+                    One make creepeth man bearing their one firmament won't fowl
+                    meat over sea
+                  </p>
+                  <div
+                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                  >
+                    <div class="authr_meta">
+                      <img src="{% static 'index/images/author1.png' %}" alt="" />
+                      <span class="d-inline-block ml-2">Cameron</span>
+                    </div>
+                    <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                      <span class="meta_info"
+                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="single_course">
+                <div class="course_head">
+                  <img class="img-fluid" src="{% static 'index/images/c2.jpg' %}" alt="" />
+                </div>
+                <div class="course_content">
+                  <span class="price">$25</span>
+                  <span class="tag mb-4 d-inline-block">design</span>
+                  <h4 class="mb-3">
+                    <a href="course-details.html">Social Media Network</a>
+                  </h4>
+                  <p>
+                    One make creepeth man bearing their one firmament won't fowl
+                    meat over sea
+                  </p>
+                  <div
+                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                  >
+                    <div class="authr_meta">
+                      <img src="{% static 'index/images/author2.png' %}" alt="" />
+                      <span class="d-inline-block ml-2">Cameron</span>
+                    </div>
+                    <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                      <span class="meta_info"
+                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="single_course">
+                <div class="course_head">
+                  <img class="img-fluid" src="{% static 'index/images/c3.jpg' %}" alt="" />
+                </div>
+                <div class="course_content">
+                  <span class="price">$25</span>
+                  <span class="tag mb-4 d-inline-block">design</span>
+                  <h4 class="mb-3">
+                    <a href="course-details.html">Computer Engineering</a>
+                  </h4>
+                  <p>
+                    One make creepeth man bearing their one firmament won't fowl
+                    meat over sea
+                  </p>
+                  <div
+                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                  >
+                    <div class="authr_meta">
+                      <img src="{% static 'index/imgages/author3.png' %}" alt="" />
+                      <span class="d-inline-block ml-2">Cameron</span>
+                    </div>
+                    <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                      <span class="meta_info"
+                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--================ End Popular Courses Area =================-->
+
+    <!--================ Start Registration Area =================-->
+    <div class="section_gap registration_area">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <div class="row clock_sec clockdiv" id="clockdiv">
+              <div class="col-lg-12">
+                <h1 class="mb-3">Advert Here</h1>
+                <p>
+                  Place an advert here
+                </p>
+              </div>
+              <div class="col clockinner1 clockinner">
+                <h1 class="days">150</h1>
+                <span class="smalltext">Days</span>
+              </div>
+              <div class="col clockinner clockinner1">
+                <h1 class="hours">23</h1>
+                <span class="smalltext">Hours</span>
+              </div>
+              <div class="col clockinner clockinner1">
+                <h1 class="minutes">47</h1>
+                <span class="smalltext">Mins</span>
+              </div>
+              <div class="col clockinner clockinner1">
+                <h1 class="seconds">59</h1>
+                <span class="smalltext">Secs</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1">
+            <div class="register_form">
+              <h3>Courses for Free</h3>
+              <p>It is high time for learning</p>
+              <form
+                class="form_area"
+                id="myForm"
+                action="mail.html"
+                method="post"
+              >
+                <div class="row">
+                  <div class="col-lg-12 text-center">
+                    <button class="primary-btn">Contact Us</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--================ End Registration Area =================-->
+
+    <!--================ Start Events Area =================-->
+    <div class="events_area">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="main_title">
+              <h2 class="mb-3 text-white">Upcoming Events</h2>
+              <p>
+                Important dates for upcoming events in LASU
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="single_event position-relative">
+              <div class="event_thumb">
+                <img src="{% static 'index/images/e1.jpg' %}" alt="" />
+              </div>
+              <div class="event_details">
+                <div class="d-flex mb-4">
+                  <div class="date"><span>1st</span> Aug</div>
+
+                  <div class="time-location">
+                    <p>
+                      <span class="ti-time mr-2"></span> 12:00 PM - 12:30 PM
+                    </p>
+                    <p>
+                      <span class="ti-location-pin mr-2"></span> Lauching of 247Connect
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  At this date we're lauching the 247Connect platform for all students and aspirants of LASU
+                </p>
+                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="single_event position-relative">
+              <div class="event_thumb">
+                <img src="{% static 'index/images/e2.jpg' %}" alt="" />
+              </div>
+              <div class="event_details">
+                <div class="d-flex mb-4">
+                  <div class="date"><span>15th</span> Dec</div>
+
+                  <div class="time-location">
+                    <p>
+                      <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
+                    </p>
+                    <p>
+                      <span class="ti-location-pin mr-2"></span> Closing Date for Reg.
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  This date is the closing date for the regsitration of the undergraduate screening for aspirants
+                </p>
+                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="text-center pt-lg-5 pt-3">
+              <a href="#" class="event-link">
+                View All Event <img src="{% static 'index/images/next.png' %}" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--================ End Events Area =================-->
+
+    <!--================ Start footer Area  =================-->
+    <footer class="footer-area section_gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 single-footer-widget">
+            <h4>Top Courses</h4>
+            <ul>
+              <li><a href="#">Accounting</a></li>
+              <li><a href="#">Computer Science</a></li>
+              <li><a href="#">Medicine</a></li>
+              <li><a href="#">Mathematics</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 single-footer-widget">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Aggregate Calculator</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Course Selector</a></li>
+              <li><a href="#">Online Registration</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 single-footer-widget">
+            <h4>Newsletter</h4>
+            <p>You can trust us. we only send promo offers,</p>
+            <div class="form-wrap" id="mc_embed_signup">
+              <form
+                target="_blank"
+                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                method="get"
+                class="form-inline"
+              >
+                <input
+                  class="form-control"
+                  name="EMAIL"
+                  placeholder="Your Email Address"
+                  onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = 'Your Email Address'"
+                  required=""
+                  type="email"
+                  disabled
+                />
+                <button class="click-btn btn btn-default">
+                  <span>subscribe</span>
+                </button>
+                <div style="position: absolute; left: -5000px;">
+                  <input
+                    name="b_36c4fd991d266f23781ded980_aefe40901a"
+                    tabindex="-1"
+                    value=""
+                    type="text"
+                  />
+                </div>
+
+                <div class="info"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row footer-bottom d-flex justify-content-between">
+          <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+{% comment %} Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> {% endcomment %}
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+          <div class="col-lg-4 col-sm-12 footer-social">
+            <a href="#"><i class="ti-facebook"></i></a>
+            <a href="#"><i class="ti-twitter"></i></a>
+            <a href="#"><i class="ti-dribbble"></i></a>
+            <a href="#"><i class="ti-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'index/edu-js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'index/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'index/edu-js/popper.js' %}"></script>
+    <script src="{% static 'index/edu-js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'index/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'index/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'index/edu-js/owl-carousel-thumb.min.js' %}"></script>
+    <script src="{% static 'index/edu-js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'index/edu-js/mail-script.js' %}"></script>
+    <script src="{% static 'index/edu-js/theme.js' %}"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="{% static 'index/edu-js/gmaps.min.js' %}"></script>
+    
+    <script src="{% static 'index/edu-js/aos.js' %}"></script>
+    <script src="{% static 'index/edu-js/main.js' %}"></script>
+
+    
+  </body>
+</html>

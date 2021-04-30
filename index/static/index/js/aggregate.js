@@ -1,0 +1,35 @@
+function calculate_aggregate() {
+    var total_points = 0;
+    var jamb_score = document.getElementById('jamb_score').value;
+
+    var grade_map = {
+        'A1': 10,
+        'B2': 9,
+        'B3': 8,
+        'C4': 7,
+        'C5': 6,
+        'C6': 5
+    };
+
+    var num_1 = document.getElementById('sub_one').value;
+    var num_2 = document.getElementById('sub_two').value;
+    var num_3 = document.getElementById('sub_three').value;
+    var num_4 = document.getElementById('sub_four').value;
+    var num_5 = document.getElementById('sub_five').value;
+
+    var grade_list = [num_1, num_2, num_3, num_4, num_5];
+
+    for (var i = 0; i < 5; i++) {
+        total_points += grade_map[grade_list[i]];
+    }
+
+    if ((parseInt(jamb_score) > 400) | (jamb_score < 0)) {
+        alert('Invalid JAMB Score!');
+    } else {
+        var aggregate = parseInt(total_points) + parseInt(jamb_score / 8);
+
+        console.log(aggregate);
+        document.getElementById('sub_but').innerText = 'AGGREGATE: ' + aggregate;
+    }
+
+}
