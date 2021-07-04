@@ -20,15 +20,18 @@ function calculate_aggregate() {
     var grade_list = [num_1, num_2, num_3, num_4, num_5];
 
     for (var i = 0; i < 5; i++) {
-        total_points += grade_map[grade_list[i]];
+        if (grade_list[i] == "grade"){
+            alert('Invalid grade input. Check and try again!');
+            break;
+        }
+        total_points += parseFloat(grade_map[grade_list[i]]);
     }
 
-    if ((parseInt(jamb_score) > 400) | (jamb_score < 0)) {
+    if ((parseFloat(jamb_score) > 400) | (jamb_score < 0)) {
         alert('Invalid JAMB Score!');
     } else {
-        var aggregate = parseInt(total_points) + parseInt(jamb_score / 8);
+        var aggregate = parseFloat(total_points) + parseFloat(jamb_score / 8);
 
-        console.log(aggregate);
         document.getElementById('sub_but').innerText = 'AGGREGATE: ' + aggregate;
     }
 

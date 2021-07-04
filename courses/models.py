@@ -9,8 +9,11 @@ class Course(models.Model):
     olevel_subjects = models.TextField()
 
     # for jamb
-    jamb_subject = models.TextField()
+    jamb_subjects = models.TextField()
     description = models.TextField(default='')
+
+    # number of views
+    no_of_views = models.IntegerField(default="100")
 
     time = models.DateTimeField(auto_now_add=True)
 

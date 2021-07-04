@@ -22,5 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('aggregate/', views.aggregate, name="aggregate-template"),
     path('course-selector/', courses_views.course_selector, name='course-selector'),
+    path('course-selector/get-course/',
+         courses_views.get_course, name='get-course'),
     path('', include('index.urls'), name='home'),
 ]
+
+admin.site.site_header = "247Connect"
+admin.site.site_title = "247Connect"
+admin.site.index_title = "247Connect"

@@ -1,10 +1,17 @@
 from django.shortcuts import render
+from events.views import get_event
 
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'index/index.html')
+    events = get_event(request)
+
+    context = {
+        'events': events
+    }
+
+    return render(request, 'index/index.html', context)
 
 
 def aggregate(request):

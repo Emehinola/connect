@@ -7,12 +7,13 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" href="{% static 'index/images/favicon.png' %}" type="image/png" />
+    <link rel="icon" href="{% static 'index/images/logo.jpg' %}" type="image/jpg" />
     <title>247Connect - Course Selector</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'index/css/bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'index/css/flaticon.css' %}" />
     <link rel="stylesheet" href="{% static 'index/css/themify-icons.css' %}" />
+    <script src="https://kit.fontawesome.com/9d936a6ca5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'index/vendors/owl-carousel/owl.carousel.min.css' %}" />
     <link rel="stylesheet" href="{% static 'index/vendors/nice-select/css/nice-select.css' %}" />
     <link rel="stylesheet" href="{% static 'index/fonts/flaticon/font/flaticon.css' %}">
@@ -41,17 +42,16 @@
                 <div class="row align-items-center">
 
                     <div class="col-6 col-xl-2">
-                        <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">247<strong>Connect</strong></a>
-                        </h1>
+                        <a href="{% url 'home' %}"><img src="{% static 'index/images/logo.jpg' %}" alt="logo" /></a>
                     </div>
 
                     <div class="col-10 col-xl-10 d-none d-xl-block">
                         <nav class="site-navigation text-right" role="navigation">
 
                             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="index.html">Aggregate Calculator</a></li>
-                                <li><a href="index.html">Course Selector</a></li>
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'aggregate-template' %}">Aggregate Calculator</a></li>
+                                <li class="active"><a href="{% url 'course-selector' %}">Course Selector</a></li>
                                 <!-- <li class="has-children">
                                     <a href="category.html">Category</a>
                                     <ul class="dropdown">
@@ -62,10 +62,10 @@
                                         <li><a href="#">Termporary</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li><a href="new-post.html"><span class="rounded bg-primary py-2 px-3 text-white"><span
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="https://wa.me/message/FWHGQZDSLJJYA1">Contact</a></li>
+                                <li><a href="/admin/courses/course/add/"><span class="rounded bg-primary py-2 px-3 text-white"><span
                                                 class="h5 mr-2">+</span> Add course</span></a></li>
                             </ul>
                         </nav>
@@ -91,7 +91,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="banner_content text-center">
-                                <h3 class="text-uppercase">
+                                <h3 class="text-uppercase mt-5 top-title">
                                     Course Selector
                                 </h3>
                                 <div class="aggregate-body text-white">
@@ -104,7 +104,7 @@
                                                 <select name="" id="sub_one" class="form-control">
                                                     <option value="" selected>Select</option>
                                                     {% for course in courses %}
-                                                    <option value="A">{{course}}</option>
+                                                    <option value="{{course}}">{{course}}</option>
                                                     {% endfor %}
                                                 </select>
                                             </div>
@@ -113,6 +113,7 @@
                                     </div>
                                     <br>
                                     <div class="row">
+                                        <div class="desc" id="desc"></div>
                                         <div style="height: 1px; width: 100%; background-color: white;">
                                         </div>
                                         <div class="col-6">
@@ -121,12 +122,9 @@
                                         </div>
                                         <div class="col-6 mb-5">
                                             <div class="select-wrap">
-                                                <div>Mathematics</div>
-                                                <div>Computer Science</div>
-                                                <div>Agric Science</div>
-                                                <div>Accounting</div>
-                                                <div>Business Admin</div>
-
+                                                <pre id="olevel" style="color: white;">
+                                                    Your courses show here
+                                                </pre>
                                             </div>
                                         </div>
 
@@ -139,17 +137,16 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="select-wrap">
-                                                <div>Mathematics</div>
-                                                <div>Computer Science</div>
-                                                <div>Agric Science</div>
-                                                <div>Accounting</div>
+                                                <pre id="jamb" style="color: white;">
+                                                    Your courses show here
+                                                </pre>
                                             </div>
                                         </div>
 
                                         <div class="col-12">
                                             <div class="select-wrap">
-                                                <button type="submit" id="sub_but" class="btn primary-btn"
-                                                    onclick="calculate_aggregate()">Check Requirement</button>
+                                                Number of views:
+                                                <span style="color: green; font-weight: bold" id="views"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -223,7 +220,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-5">
                         <div class="main_title">
-                            <h2 class="mb-3">Our Popular Courses</h2>
+                            <h2 class="mb-3">Latest Education News</h2>
                             <p>
                                 Replenish man have thing gathering lights yielding shall you
                             </p>
@@ -389,7 +386,7 @@
                         <div class="main_title">
                             <h2 class="mb-3 text-white">Upcoming Events</h2>
                             <p>
-                                Important dates for upcoming events in LASU
+                                Important dates for upcoming events
                             </p>
                         </div>
                     </div>
@@ -516,10 +513,10 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                     <div class="col-lg-4 col-sm-12 footer-social">
-                        <a href="#"><i class="ti-facebook"></i></a>
-                        <a href="#"><i class="ti-twitter"></i></a>
-                        <a href="#"><i class="ti-dribbble"></i></a>
-                        <a href="#"><i class="ti-linkedin"></i></a>
+                        <a href="https://www.facebook.com/groups/379447043227960/?ref=shareV"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/24_7CONNECT?s=09"><i class="fa fa fa-twitter"></i></a>
+                        <a href="https://wa.me/message/FWHGQZDSLJJYA1"><i class="fa fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa fa-telegram"></i></a>
                     </div>
                 </div>
             </div>
@@ -544,6 +541,7 @@
         <script src="{% static 'index/edu-js/gmaps.min.js' %}"></script>
 
         <script src="{% static 'index/edu-js/aos.js' %}"></script>
+        <script src="{% static 'courses/js/course_selector.js' %}"></script>
         <script src="{% static 'index/edu-js/main.js' %}"></script>
 
 
