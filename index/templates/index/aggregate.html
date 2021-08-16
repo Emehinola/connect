@@ -7,7 +7,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" href="{% static 'index/images/logo.jpg' %}" type="image/jpg" />
+    <link rel="icon" href="{% static 'index/images/fav.jpeg' %}" type="image/jpg" />
     <title>247Connect - Aggregate Calculator</title>
     <!-- Bootstrap CSS -->
     <script src="https://kit.fontawesome.com/9d936a6ca5.js" crossorigin="anonymous"></script>
@@ -42,7 +42,7 @@
                 <div class="row align-items-center">
 
                     <div class="col-6 col-xl-2">
-                        <a href="{% url 'home' %}"><img src="{% static 'index/images/logo.jpg' %}" alt="logo" /></a>
+                        <a href="{% url 'home' %}"><img src="{% static 'index/images/logo.jpeg' %}" alt="logo" /></a>
                     </div>
 
                     <div class="col-10 col-xl-10 d-none d-xl-block">
@@ -262,8 +262,10 @@
         </section>
         <!--================ End Feature Area =================-->
 
-        <!--================ Start Popular Courses Area =================-->
-        <div class="popular_courses">
+        <!--================ NEWS SECTION =================-->
+        
+
+        {% comment %} <div class="popular_courses">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-5">
@@ -375,8 +377,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!--================ End Popular Courses Area =================-->
+        </div> {% endcomment %}
+
+
+        <!--================ NEWS SECTION =================-->
 
         <!--================ Start Registration Area =================-->
         <div class="section_gap registration_area">
@@ -428,81 +432,58 @@
 
         <!--================ Start Events Area =================-->
         <div class="events_area">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5">
-                        <div class="main_title">
-                            <h2 class="mb-3 text-white">Upcoming Events</h2>
-                            <p>
-                                Important dates for upcoming events
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single_event position-relative">
-                            <div class="event_thumb">
-                                <img src="{% static 'index/images/e1.jpg' %}" alt="" />
-                            </div>
-                            <div class="event_details">
-                                <div class="d-flex mb-4">
-                                    <div class="date"><span>1st</span> Aug</div>
-
-                                    <div class="time-location">
-                                        <p>
-                                            <span class="ti-time mr-2"></span> 12:00 PM - 12:30 PM
-                                        </p>
-                                        <p>
-                                            <span class="ti-location-pin mr-2"></span> Lauching of 247Connect
-                                        </p>
-                                    </div>
-                                </div>
-                                <p>
-                                    At this date we're lauching the 247Connect platform for all students and aspirants
-                                    of LASU
-                                </p>
-                                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single_event position-relative">
-                            <div class="event_thumb">
-                                <img src="{% static 'index/images/e2.jpg' %}" alt="" />
-                            </div>
-                            <div class="event_details">
-                                <div class="d-flex mb-4">
-                                    <div class="date"><span>15th</span> Dec</div>
-
-                                    <div class="time-location">
-                                        <p>
-                                            <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
-                                        </p>
-                                        <p>
-                                            <span class="ti-location-pin mr-2"></span> Closing Date for Reg.
-                                        </p>
-                                    </div>
-                                </div>
-                                <p>
-                                    This date is the closing date for the regsitration of the undergraduate screening
-                                    for aspirants
-                                </p>
-                                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="text-center pt-lg-5 pt-3">
-                            <a href="#" class="event-link">
-                                View All Event <img src="{% static 'index/images/next.png' %}" alt="" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="main_title">
+              <h2 class="mb-3 text-white">Upcoming Events</h2>
+              <p>
+                Important dates for upcoming events
+              </p>
             </div>
+          </div>
         </div>
+        <div class="row">
+          {% for event in events %}
+            <div class="col-lg-6 col-md-6">
+            <div class="single_event position-relative">
+              <div class="event_thumb">
+                <img src="{% static 'index/images/e1.jpg' %}" alt="" />
+              </div>
+              <div class="event_details">
+                <div class="d-flex mb-4">
+                  <div class="date"><span>{{ event.event_date }}</span></div>
+
+                  <div class="time-location">
+                    <p>
+                      <span class="fa fa-clock mr-2"></span> {{ event.event_time }}
+                    </p>
+                    <p>
+                      <span class="fa fa-map mr-2"></span> {{ event.event_location }}
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  {{ event.event_description }}
+                </p>
+                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+          {% comment %} for events ending {% endcomment %}
+
+          <div class="col-lg-12">
+            <div class="text-center pt-lg-5 pt-3">
+              <a href="#" class="event-link">
+                View All Event <img src="{% static 'index/images/next.png' %}" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
         <!--================ End Events Area =================-->
 
         <!--================ Start footer Area  =================-->
@@ -521,10 +502,12 @@
                     <div class="col-lg-4 col-md-6 single-footer-widget">
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="#">Aggregate Calculator</a></li>
+                            <ul>
+                            <li><a href="{% url 'aggregate-template' %}">Aggregate Calculator</a></li>
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">Course Selector</a></li>
-                            <li><a href="#">Online Registration</a></li>
+                            <li><a href="{% url 'course-selector' %}">Course Selector</a></li>
+                            <li><a href="https://wa.me/+2348101201541/?text=Hi, i want to do registration for ___ ">Online Registration</a></li>
+                        </ul>
                         </ul>
                     </div>
 

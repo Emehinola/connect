@@ -2,13 +2,16 @@ from django.shortcuts import render
 from . models import Course
 import json
 from django.http import JsonResponse
+from events.models import Event
 
 # Create your views here.
 
 
 def course_selector(request):
+    events = Event.objects.all()[:2]
     courses = Course.objects.all()
-    conext = {'courses': courses}
+    no_of_views = sum([i.no_of_views for i in courses])
+    conext = {'courses': courses, 'events': events, 'no_of_views': no_of_views}
     return render(request, 'courses/course_selector.html', conext)
 
 
