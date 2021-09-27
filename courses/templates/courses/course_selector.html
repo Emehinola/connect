@@ -62,7 +62,7 @@
                                         <li><a href="#">Termporary</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="#">Blog</a></li>
+                                <li><a href="/news/">Blog</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="https://wa.me/message/FWHGQZDSLJJYA1">Contact</a></li>
                                 <li><a href="/admin/courses/course/add/"><span class="rounded bg-primary py-2 px-3 text-white"><span
@@ -158,6 +158,12 @@
             </div>
         </section>
         <!--================ End Home Banner Area =================-->
+
+        <section class="feature_area section_gap_top">
+            <div class="container">
+                <img src="{% static 'index/images/connect-3.jpeg' %}" width="100%" alt="banner">
+            </div>
+        </section>
 
         <!--================ Start Feature Area =================-->
         <section class="feature_area section_gap_top">
@@ -454,7 +460,7 @@
                         <h4>Quick Links</h4>
                         <ul>
                             <li><a href="{% url 'aggregate-template' %}">Aggregate Calculator</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="{% url 'blogs' %}">Blog</a></li>
                             <li><a href="{% url 'course-selector' %}">Course Selector</a></li>
                             <li><a href="https://wa.me/+2348101201541/?text=Hi, i want to do registration for ___ ">Online Registration</a></li>
                         </ul>
