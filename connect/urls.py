@@ -16,6 +16,7 @@ Including another URLconf
 from os import stat
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 from index import views
 from courses import views as courses_views
 from django.conf.urls.static import static
@@ -27,6 +28,7 @@ urlpatterns = [
     path('course-selector/', courses_views.course_selector, name='course-selector'),
     path('course-selector/get-course/',
          courses_views.get_course, name='get-course'),
+    path('news/', include('blog.urls')),
     path('', include('index.urls'), name='home'),
 ]
 

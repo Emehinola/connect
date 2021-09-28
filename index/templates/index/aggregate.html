@@ -42,7 +42,8 @@
                 <div class="row align-items-center">
 
                     <div class="col-6 col-xl-2">
-                        <a href="{% url 'home' %}"><img src="{% static 'index/images/logo.jpeg' %}" alt="logo" /></a>
+                        <a href="{% url 'home' %}"><img src="{% static 'index/images/text_logo.jpg' %}"
+                                alt="logo" /></a>
                     </div>
 
                     <div class="col-10 col-xl-10 d-none d-xl-block">
@@ -50,7 +51,8 @@
 
                             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                                 <li><a href="{% url 'home' %}">Home</a></li>
-                                <li class="active"><a href="{% url 'aggregate-template' %}">Aggregate Calculator</a></li>
+                                <li class="active"><a href="{% url 'aggregate-template' %}">Aggregate Calculator</a>
+                                </li>
                                 <li><a href="{% url 'course-selector' %}">Course Selector</a></li>
                                 <!-- <li class="has-children">
                                     <a href="category.html">Category</a>
@@ -62,10 +64,11 @@
                                         <li><a href="#">Termporary</a></li>
                                     </ul>
                                 </li> -->
-                                <li><a href="#">Blog</a></li>
+                                <li><a href="/news/">Blog</a></li>
                                 <li><a href="#">About</a></li>
                                 <li><a href="https://wa.me/message/FWHGQZDSLJJYA1">Contact</a></li>
-                                <li><a href="/admin/courses/course/add/"><span class="rounded bg-primary py-2 px-3 text-white"><span
+                                <li><a href="/admin/courses/course/add/"><span
+                                            class="rounded bg-primary py-2 px-3 text-white"><span
                                                 class="h5 mr-2">+</span> Add course</span></a></li>
                             </ul>
                         </nav>
@@ -89,10 +92,18 @@
             <div class="banner_inner">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 mt-5">
                             <div class="banner_content text-center">
                                 <h3 class="text-uppercase">
-                                    Aggregate Calculator
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <div><img height="50" width="50" src="{% static 'index/images/lasu.jpeg' %}"
+                                                    alt="lasu-logo"></div>
+                                        </div>
+                                        <div class="col-8">LASU Aggregate Calculator</div>
+                                        <div class="col-2"><img height="50" src="{% static 'index/images/logo.jpeg' %}"
+                                                alt="lasu-logo"></div>
+                                    </div>
                                 </h3>
                                 <div class="aggregate-body text-white">
                                     <div class="row text-center">
@@ -102,7 +113,7 @@
                                         <div class="col-6">
                                             <div class="select-wrap">
                                                 <select name="grade" id="sub_one" class="form-control">
-                                                   
+
                                                     <option value="A1">A1</option>
                                                     <option value="B2">B2</option>
                                                     <option value="B3">B3</option>
@@ -119,7 +130,7 @@
                                         <div class="col-6">
                                             <div class="select-wrap">
                                                 <select name="grade" id="sub_two" class="form-control">
-                                                    
+
                                                     <option value="A1">A1</option>
                                                     <option value="B2">B2</option>
                                                     <option value="B3">B3</option>
@@ -136,7 +147,7 @@
                                         <div class="col-6">
                                             <div class="select-wrap">
                                                 <select name="grade" id="sub_three" class="form-control">
-                                                  
+
                                                     <option value="A1">A1</option>
                                                     <option value="B2">B2</option>
                                                     <option value="B3">B3</option>
@@ -153,7 +164,7 @@
                                         <div class="col-6">
                                             <div class="select-wrap">
                                                 <select name="" id="sub_four" class="form-control">
-                                                   
+
                                                     <option value="A1">A1</option>
                                                     <option value="B2">B2</option>
                                                     <option value="B3">B3</option>
@@ -190,10 +201,21 @@
                                             </div>
                                         </div>
                                         <br><br>
-
+                                        <div class="col-12">
+                                            <div id="o-level" style="color: yellow; height: 100;">
+                                                
+                                            </div>
+                                            <div id="utme" style="color: yellow; height: 100;">
+                                                 
+                                            </div>
+                                            <div id="aggregate" style="color: yellow; height: 100;">
+                                                 
+                                            </div>
+                                        </div>
                                         <div class="col-12">
                                             <div class="select-wrap">
-                                                <button type="submit" id="sub_but" class="btn primary-btn" style="font-size: 20px"
+                                                <button type="submit" id="sub_but" class="btn primary-btn"
+                                                    style="font-size: 20px"
                                                     onclick="calculate_aggregate()">Calculate</button>
                                             </div>
                                         </div>
@@ -206,7 +228,7 @@
             </div>
         </section>
         <!--================ End Home Banner Area =================-->
-
+        
         <!--================ Start Feature Area =================-->
         <section class="feature_area section_gap_top">
             <div class="container">
@@ -252,7 +274,7 @@
                             <div class="desc">
                                 <h4 class="mt-3 mb-2">Tutorial Available</h4>
                                 <p>
-                                Tutorial is available for JAMB, POST-UTME, O'level and son on
+                                    Tutorial is available for JAMB, POST-UTME, O'level and son on
                                 </p>
                             </div>
                         </div>
@@ -262,8 +284,14 @@
         </section>
         <!--================ End Feature Area =================-->
 
+        <section class="feature_area section_gap_top">
+            <div class="container">
+                <img src="{% static 'index/images/connect-1.jpeg' %}" width="100%" alt="banner">
+            </div>
+        </section>
+
         <!--================ NEWS SECTION =================-->
-        
+
 
         {% comment %} <div class="popular_courses">
             <div class="container">
@@ -419,7 +447,8 @@
                             <form class="form_area" id="myForm" action="mail.html" method="post">
                                 <div class="row">
                                     <div class="col-lg-12 text-center">
-                                        <button class="primary-btn">Contact Us</button>
+                                        <a href="https://wa.me/message/FWHGQZDSLJJYA1" class="primary-btn">Contact
+                                            Us</a>
                                     </div>
                                 </div>
                             </form>
@@ -432,58 +461,58 @@
 
         <!--================ Start Events Area =================-->
         <div class="events_area">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-5">
-            <div class="main_title">
-              <h2 class="mb-3 text-white">Upcoming Events</h2>
-              <p>
-                Important dates for upcoming events
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          {% for event in events %}
-            <div class="col-lg-6 col-md-6">
-            <div class="single_event position-relative">
-              <div class="event_thumb">
-                <img src="{% static 'index/images/e1.jpg' %}" alt="" />
-              </div>
-              <div class="event_details">
-                <div class="d-flex mb-4">
-                  <div class="date"><span>{{ event.event_date }}</span></div>
-
-                  <div class="time-location">
-                    <p>
-                      <span class="fa fa-clock mr-2"></span> {{ event.event_time }}
-                    </p>
-                    <p>
-                      <span class="fa fa-map mr-2"></span> {{ event.event_location }}
-                    </p>
-                  </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5">
+                        <div class="main_title">
+                            <h2 class="mb-3 text-white">Upcoming Events</h2>
+                            <p>
+                                Important dates for upcoming events
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <p>
-                  {{ event.event_description }}
-                </p>
-                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
+                <div class="row">
+                    {% for event in events %}
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single_event position-relative">
+                            <div class="event_thumb">
+                                <img src="{% static 'index/images/e1.jpg' %}" alt="" />
+                            </div>
+                            <div class="event_details">
+                                <div class="d-flex mb-4">
+                                    <div class="date"><span>{{ event.event_date }}</span></div>
 
-          {% comment %} for events ending {% endcomment %}
+                                    <div class="time-location">
+                                        <p>
+                                            <span class="fa fa-clock mr-2"></span> {{ event.event_time }}
+                                        </p>
+                                        <p>
+                                            <span class="fa fa-map mr-2"></span> {{ event.event_location }}
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>
+                                    {{ event.event_description }}
+                                </p>
+                                <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
 
-          <div class="col-lg-12">
-            <div class="text-center pt-lg-5 pt-3">
-              <a href="#" class="event-link">
-                View All Event <img src="{% static 'index/images/next.png' %}" alt="" />
-              </a>
+                    {% comment %} for events ending {% endcomment %}
+
+                    <div class="col-lg-12">
+                        <div class="text-center pt-lg-5 pt-3">
+                            <a href="#" class="event-link">
+                                View All Event <img src="{% static 'index/images/next.png' %}" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
         <!--================ End Events Area =================-->
 
         <!--================ Start footer Area  =================-->
@@ -503,11 +532,12 @@
                         <h4>Quick Links</h4>
                         <ul>
                             <ul>
-                            <li><a href="{% url 'aggregate-template' %}">Aggregate Calculator</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="{% url 'course-selector' %}">Course Selector</a></li>
-                            <li><a href="https://wa.me/+2348101201541/?text=Hi, i want to do registration for ___ ">Online Registration</a></li>
-                        </ul>
+                                <li><a href="{% url 'aggregate-template' %}">LASU Aggregate Calculator</a></li>
+                                <li><a href="{% url 'blogs' %}">Blog</a></li>
+                                <li><a href="{% url 'course-selector' %}">Course Selector</a></li>
+                                <li><a href="https://wa.me/+2348101201541/?text=Hi, i want to do registration for ___ ">Online
+                                        Registration</a></li>
+                            </ul>
                         </ul>
                     </div>
 
@@ -544,7 +574,8 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
                     <div class="col-lg-4 col-sm-12 footer-social">
-                        <a href="https://www.facebook.com/groups/379447043227960/?ref=shareV"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/groups/379447043227960/?ref=shareV"><i
+                                class="fa fa-facebook"></i></a>
                         <a href="https://twitter.com/24_7CONNECT?s=09"><i class="fa fa fa-twitter"></i></a>
                         <a href="https://wa.me/message/FWHGQZDSLJJYA1"><i class="fa fa-whatsapp"></i></a>
                         <a href="#"><i class="fa fa-telegram"></i></a>
