@@ -21,6 +21,7 @@ from index import views
 from courses import views as courses_views
 from django.conf.urls.static import static
 from django.conf import settings
+from index import urls as index_url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +30,7 @@ urlpatterns = [
     path('course-selector/get-course/',
          courses_views.get_course, name='get-course'),
     path('news/', include('blog.urls')),
+    #path('home/', index_url.home, name='home')
     path('', include('index.urls'), name='home'),
 ]
 
