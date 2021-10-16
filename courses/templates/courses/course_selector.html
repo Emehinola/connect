@@ -94,61 +94,64 @@
                                 <h3 class="text-uppercase mt-5 top-title">
                                     Course Selector
                                 </h3>
-                                <div class="aggregate-body text-white">
-                                    <div class="row text-center">
-                                        <div class="col-6">
-                                            <div class="text">Course Choice</div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="select-wrap">
-                                                <select name="" id="sub_one" class="form-control">
-                                                    <option value="" selected>Select</option>
-                                                    {% for course in courses %}
-                                                    <option value="{{course}}">{{course}}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-                                        </div>
+                                <!--<div class="aggregate-body text-white">-->
+                                <!--    <div class="row text-center">-->
+                                <!--        <div class="col-6">-->
+                                <!--            <div class="text">Course Choice</div>-->
+                                <!--        </div>-->
+                                <!--        <div class="col-6">-->
+                                <!--            <div class="select-wrap">-->
+                                <!--                <select name="" id="sub_one" class="form-control">-->
+                                <!--                    <option value="" selected>Select</option>-->
+                                <!--                    {% for course in courses %}-->
+                                <!--                    <option value="{{course}}">{{course}}</option>-->
+                                <!--                    {% endfor %}-->
+                                <!--                </select>-->
+                                <!--            </div>-->
+                                <!--        </div>-->
 
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="desc" id="desc"></div>
-                                        <div style="height: 1px; width: 100%; background-color: white;">
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text" style="color: teal; font-weight: bolder;">O'LEVEL
-                                                REQUIREMENTS</div>
-                                        </div>
-                                        <div class="col-6 mb-5">
-                                            <div class="select-wrap">
-                                                <pre id="olevel" style="color: white;">
-                                                    Your courses show here
-                                                </pre>
-                                            </div>
-                                        </div>
+                                <!--    </div>-->
+                                <!--    <br>-->
+                                <!--    <div class="row">-->
+                                <!--        <div class="desc" id="desc"></div>-->
+                                <!--        <div style="height: 1px; width: 100%; background-color: white;">-->
+                                <!--        </div>-->
+                                <!--        <div class="col-6">-->
+                                <!--            <div class="text" style="color: teal; font-weight: bolder;">O'LEVEL-->
+                                <!--                REQUIREMENTS</div>-->
+                                <!--        </div>-->
+                                <!--        <div class="col-6 mb-5">-->
+                                <!--            <div class="select-wrap">-->
+                                <!--                <pre id="olevel" style="color: white;">-->
+                                <!--                    Your courses show here-->
+                                <!--                </pre>-->
+                                <!--            </div>-->
+                                <!--        </div>-->
 
-                                        <div style="height: 1px; width: 100%; background-color: white;">
-                                        </div>
+                                <!--        <div style="height: 1px; width: 100%; background-color: white;">-->
+                                <!--        </div>-->
 
-                                        <div class="col-6">
-                                            <div class="text" style="color: teal; font-weight: bolder;">UTME
-                                                REQUIREMENTS</div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="select-wrap">
-                                                <pre id="jamb" style="color: white;">
-                                                    Your courses show here
-                                                </pre>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12">
-                                            <div class="select-wrap">
-                                                Number of views: 
-                                                <span style="color: green; font-weight: bold" id="views">{{ no_of_views }}</span>
-                                            </div>
-                                        </div>
+                                <!--        <div class="col-6">-->
+                                <!--            <div class="text" style="color: teal; font-weight: bolder;">UTME-->
+                                <!--                REQUIREMENTS</div>-->
+                                <!--        </div>-->
+                                <!--        <div class="col-6">-->
+                                <!--            <div class="select-wrap">-->
+                                <!--                <pre id="jamb" style="color: white;">-->
+                                <!--                    Your courses show here-->
+                                <!--                </pre>-->
+                                <!--            </div>-->
+                                <!--        </div>-->
+                                        <a type="submit" id="sub_but" class="btn primary-btn" href="https://services.lidc.lasu.edu.ng/admissionscreening/courserequirement/index.php"
+                                                    style="font-size: 20px"
+                                                    onclick="calculate_aggregate()">Check Course</a>
+                                                    
+                                        <!--<div class="col-12">-->
+                                        <!--    <div class="select-wrap">-->
+                                        <!--        Number of views: -->
+                                        <!--        <span style="color: green; font-weight: bold" id="views">{{ no_of_views }}</span>-->
+                                        <!--    </div>-->
+                                        <!--</div>-->
                                     </div>
                                 </div>
                             </div>

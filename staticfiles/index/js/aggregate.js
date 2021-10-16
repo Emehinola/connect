@@ -32,10 +32,10 @@ function calculate_aggregate() {
     } else {
         var aggregate = parseFloat(total_points) + parseFloat(jamb_score / 8);
 
-        document.getElementById('sub_but').innerText = 'AGGREGATE: ' + aggregate;
+        document.getElementById('sub_but').innerText = 'AGGREGATE: ' + aggregate.toFixed(2);
         document.getElementById('o-level').innerText = 'O-LEVEL POINT: ' + total_points;
-        document.getElementById('utme').innerText = 'UTME POINT: ' + parseFloat(jamb_score / 8);
-        document.getElementById('aggregate').innerText = 'TOTAL AGGREGATE SCORE: ' + aggregate;
+        document.getElementById('utme').innerText = 'UTME POINT: ' + parseFloat(jamb_score / 8).toFixed(2);
+        document.getElementById('aggregate').innerText = 'TOTAL AGGREGATE SCORE: ' + aggregate.toFixed(2);
     }
 
 }

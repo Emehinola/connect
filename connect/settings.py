@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['CONNECT_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['247connect.com.ng', '127.0.0.1']
+ALLOWED_HOSTS = ['247connect.com.ng', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -80,12 +80,40 @@ WSGI_APPLICATION = 'connect.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'emehinola_247connect',
+#         'USER': 'emehinola_sam',
+#         'PASSWORD': '7c2hcA7a8@LtKMA',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'sql_mode': 'STRICT_ALL_TABLES',
+#         },
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'emehinola_247connect',
+        'ENGINE': 'mysql.connector.django',
+        'USER': 'emehinola_sam',
+        'PASSWORD': '7c2hcA7a8@LtKMA',
+        'OPTIONS': {
+          'autocommit': True,
+        },
     }
 }
+
+
 
 
 # Password validation
